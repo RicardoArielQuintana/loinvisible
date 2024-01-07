@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color:black ; */
+  }
+
+  header {
+    align-items: center;
+    background-color: #42426b;
+    justify-content: space-between;
+  }
+  
+  .navbar {
+    background-color: #42426b !important;
+  }
+  
+  .navbar-toggler {
+    background-color: aliceblue;
+  }
+  
+  .logo {
+    width: 120px;
+  }
+
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    transition: all 0.25s;
+  }
+  nav ul li:hover { 
+    box-sizing: content-box;
+    box-shadow: 0 20px 16px rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+
+
+  h1 {
+    /*ESTILOS MAQUINA DE ESCRIBIR*/
+    color: aliceblue;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 37ch;
+    animation: typing 2.5s steps(37), blink .5s infinite step-end alternate;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+/*ANIMACIONES MÃQUINA DE ESCRIBIR*/
+@keyframes typing {
+    from {
+        width: 0px
+    }
+}
+
+@keyframes blink {
+    20% { border-color: transparent  }
+}
+
+.contFila{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.galeriaExpand{
+    display: flex;
+    width: 800px;
+    height: 600px;
+}
+
+.galeriaExpand img{
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .6;
+    transition: .5s ease;
+}
+/* ESTILO PARA ANIMACION DE IMAGENES */
+
+.galeriaExpand img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.grillaImg img{
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 30px #000;
+}
+
+.grillaImg{
+    display: grid;
+    grid-template-columns: 
+    repeat(
+        auto-fill,
+        minmax(600px, 1fr)
+    );
+    gap: 32px;
+}
+
+/* FOOTER */
+textarea{
+    min-height: 106 px;
+    max-height: 300px;
+    width: 200px;
+    /* form-sizing: content; */
+}
+
+.pulser{
+  width: 50px;
+  height: 50px;
+  background-color: #09f;
+  border-radius: 100%;
+  position: relative;
+  transition: all 300ms ease-in-out; /*AL SALIR DE ANIMACIÓN*/
+  /* transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.26, -0.29, 0.7, 1.47); */
+}
+
+.pulser:hover{
+  scale: 2;
+  background-color: red;
+  box-shadow: 0px 0px 10px red;
+  transition-duration: 1s;  /*AL ENTRAR EN ANIMACIÓN*/
+}
+/*ACCESIBILIDAD - doy control al usuario de quitar las animaciones desde su sistema*/
+/* @media (prefers-reduced-motion: reduce) {
+  .pulser {
+    transition: none;
+  }
+} */
