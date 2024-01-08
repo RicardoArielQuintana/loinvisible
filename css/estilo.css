@@ -19,6 +19,9 @@ header {
   max-width: 5rem;
 }
 
+.nav{
+  transition: all 300ms cubic-bezier(0.65,0.05,0.36,1);
+}
 .nav-list {
   list-style-type: none;
   display: flex;
@@ -58,7 +61,7 @@ h1 {
   font-size: 1.5rem;
 }
 
-/*ANIMACIONES MÃQUINA DE ESCRIBIR*/
+/*ANIMACIONES MAQUINA DE ESCRIBIR*/
 @keyframes typing {
   from {
     width: 0px
@@ -70,7 +73,7 @@ h1 {
     border-color: transparent
   }
 }
-
+/* GALERIA EXPANSIBLE CON CLIC */
 .contFila {
   display: flex;
   flex-direction: row;
@@ -80,8 +83,9 @@ h1 {
 
 .galeriaExpand {
   display: flex;
-  width: 100vw;
+  width: 90vw;
   height: 600px;
+  margin: 1rem;
 }
 
 .galeriaExpand img {
@@ -92,15 +96,16 @@ h1 {
   transition: .5s ease;
 }
 
-/* ESTILO PARA ANIMACION DE IMAGENES */
+/* ESTILO PARA ANIMACION DE GALERIA EXPANSIBLE */
 
 .galeriaExpand img:hover {
-  cursor: crosshair;
+  cursor: cell;
   width: 300px;
   opacity: 1;
   filter: contrast(120%);
 }
 
+/* GRILLA DE IMAGENES */
 .grillaImg img {
   border-radius: 8px;
   width: 100%;
@@ -113,7 +118,7 @@ h1 {
   grid-template-columns:
     repeat(auto-fill,
       minmax(400px, 1fr));
-  gap: 32px;
+  gap: 2rem;
 }
 
 /* FOOTER */
@@ -130,7 +135,7 @@ textarea {
   background-color: #09f;
   border-radius: 100%;
   position: relative;
-  transition: all 300ms ease-in-out;
+  transition: all 300ms cubic-bezier(0.65,0.05,0.36,1);
   /*AL SALIR DE ANIMACIÓN*/
   /* transition-duration: 2s;
   transition-timing-function: cubic-bezier(0.26, -0.29, 0.7, 1.47); */
